@@ -24,7 +24,7 @@ class PendingTestWidget extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: GridView.builder(
-                itemCount: DummyData.pendingTest.length,
+                itemCount: DummyData.pendingTests.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 12,
@@ -35,7 +35,7 @@ class PendingTestWidget extends StatelessWidget {
                 shrinkWrap: true,
 
                 itemBuilder: (context, index) {
-                  PendingTest test = DummyData.pendingTest[index];
+                  PendingTest test = DummyData.pendingTests[index];
                   return PendingTestItem(test: test);
                 },
               ),

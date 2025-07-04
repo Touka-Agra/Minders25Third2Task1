@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:task1/DummyData.dart';
 
 import '../../Classes/PendingTest.dart';
+import '../../Classes/Subject.dart';
 import '../../Core/MyColors.dart';
 import '../../Customs/CustomTitleText.dart';
 import 'HelpingWidgets/AppBar/MyAppBar.dart';
 import 'HelpingWidgets/PendingTest/PendingTestWidget.dart';
 import 'HelpingWidgets/PointsCard/PointsCard.dart';
+import 'HelpingWidgets/Subject/SubjectWidget.dart';
 import 'HelpingWidgets/WelcomWidget/WelcomWidget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,7 +35,7 @@ class HomeScreen extends StatelessWidget {
 
               PendingTestWidget(),
 
-
+              SubjectWidget(),
             ],
           ),
         ),
