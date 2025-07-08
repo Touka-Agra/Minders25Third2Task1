@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 import '../../../../Core/MyColors.dart';
 
 class MyAppBar extends StatelessWidget {
-  const MyAppBar({super.key});
+  Color itemColors;
+
+  MyAppBar({super.key, this.itemColors = Colors.black});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Icon(Icons.list),
+        Icon(Icons.list, color: itemColors),
         Row(
           children: [
-            const Icon(Icons.notifications_none_outlined),
+            Icon(Icons.notifications_none_outlined, color: itemColors),
             const SizedBox(width: 12),
             Stack(
               children: [

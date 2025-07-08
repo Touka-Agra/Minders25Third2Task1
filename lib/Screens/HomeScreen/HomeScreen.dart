@@ -10,30 +10,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        WelcomeWidget(),
 
-    return Scaffold(
-      backgroundColor: Colors.grey.shade50,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            MyAppBar(),
-            SizedBox(height: 15),
-        
-            WelcomeWidget(),
-        
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: PointsCard(),
-            ),
-        
-            PendingTestWidget(),
-        
-            SubjectWidget(),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          child: PointsCard(),
         ),
-      ),
+
+        PendingTestWidget(),
+
+        SubjectWidget(),
+      ],
     );
   }
 }
-
