@@ -11,38 +11,34 @@ class PendingTestWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              CustomTitleText(title: "4 Pending tests "),
-              Icon(Icons.error_outline, color: MyColors.redColor, size: 20),
-            ],
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15.0),
-              child: GridView.builder(
-                itemCount: DummyData.pendingTests.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 8,
-                  childAspectRatio: 1.8,
-                ),
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-
-                itemBuilder: (context, index) {
-                  PendingTest test = DummyData.pendingTests[index];
-                  return PendingTestItem(test: test);
-                },
-              ),
+    return Column(
+      children: [
+        Row(
+          children: [
+            CustomTitleText(title: "4 Pending tests "),
+            Icon(Icons.error_outline, color: MyColors.redColor, size: 20),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15.0),
+          child: GridView.builder(
+            itemCount: DummyData.pendingTests.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 12,
+              mainAxisSpacing: 8,
+              childAspectRatio: 1.8,
             ),
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+
+            itemBuilder: (context, index) {
+              PendingTest test = DummyData.pendingTests[index];
+              return PendingTestItem(test: test);
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task1/Screens/StartScreen/StartScreen.dart';
 
-import 'Screens/HomeScreen/HomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const HomeScreen(),
+      home: const StartScreen(),
     );
   }
 }
