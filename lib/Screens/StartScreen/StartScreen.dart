@@ -21,10 +21,10 @@ class _StartScreenState extends State<StartScreen> {
     TabItem(icon: Icons.book_rounded, title: "FAQ's"),
   ];
 
-  final List<Widget> screens = const [
-    HomeScreen(),
+  final List<Widget> screens = [
+    const HomeScreen(),
     SubjectsScreen(),
-    FAQScreen(),
+    const FAQScreen(),
   ];
 
   int selectedIndex = 0;
@@ -38,34 +38,23 @@ class _StartScreenState extends State<StartScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       extendBody: true,
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            if (isSubjectsScreen)
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  MyPaths.bgImage,
-                  fit: BoxFit.cover,
-                ),
-              ),
-        
-            SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  children:[
-                    MyAppBar(itemColors: itemColors),
-                    SizedBox(height: 15),
-                
-                    screens[selectedIndex],
-                  ]
-                )
+      body: Stack(
+        children: [
+          if (isSubjectsScreen)
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Image.asset(
+                MyPaths.bgImage,
+                fit: BoxFit.cover,
               ),
             ),
-          ],
-        ),
+
+          SafeArea(
+            child:screens[selectedIndex],
+
+          ),
+        ],
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),

@@ -38,6 +38,11 @@ class DummyData {
       colors: [Colors.blueAccent, Colors.deepPurple.shade400],
       path: MyPaths.maths,
     ),
+    Subject(
+      name: "Physics",
+      colors: [Colors.deepPurple.shade400, Colors.pink],
+      path: MyPaths.physics,
+    ),
 
     Subject(
       name: "Chemistry",
@@ -45,11 +50,7 @@ class DummyData {
       path: MyPaths.chemistry,
     ),
 
-    Subject(
-      name: "Physics",
-      colors: [Colors.deepPurple.shade400, Colors.pink],
-      path: MyPaths.physics,
-    ),
+
 
     Subject(
       name: "Reasoning",
