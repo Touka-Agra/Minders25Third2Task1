@@ -1,5 +1,6 @@
 class MyPaths{
   static String bgImage = "assets/images/image.jpg";
+  static String profile = "assets/images/clown.jpg";
 
   //Subject bg image
   static String maths = "assets/images/math.jpg";

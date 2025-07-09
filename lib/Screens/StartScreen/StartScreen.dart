@@ -1,4 +1,5 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task1/Core/MyPaths.dart';
 
@@ -6,6 +7,7 @@ import '../../Core/MyColors.dart';
 import '../HomeScreen/HelpingWidgets/AppBar/MyAppBar.dart';
 import '../HomeScreen/HomeScreen.dart';
 import '../SubjectsScreen/SubjectsScreen.dart';
+import 'package:iconly/iconly.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -15,10 +17,10 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
-  final List<TabItem> items = const [
-    TabItem(icon: Icons.home_filled, title: 'Home'),
-    TabItem(icon: Icons.menu_book_outlined, title: 'Subjects'),
-    TabItem(icon: Icons.book_rounded, title: "FAQ's"),
+  final List<TabItem> items = [
+    const TabItem(icon: IconlyBold.home, title: 'Home'),
+    TabItem(icon: CupertinoIcons.book, title: 'Subjects'),
+    const TabItem(icon: Icons.book_rounded, title: "FAQ's"),
   ];
 
   final List<Widget> screens = [

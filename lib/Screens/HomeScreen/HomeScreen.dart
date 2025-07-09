@@ -11,24 +11,30 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(12.0,5 , 12, 12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            MyAppBar(itemColors: Colors.black),
-            WelcomeWidget(),
-      
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: PointsCard(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MyAppBar(itemColors: Colors.black),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12.0, 5, 12, 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+
+              children: [
+                WelcomeWidget(),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: PointsCard(),
+                ),
+
+                PendingTestWidget(),
+
+                SubjectWidget(),
+              ],
             ),
-      
-            PendingTestWidget(),
-      
-            SubjectWidget(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

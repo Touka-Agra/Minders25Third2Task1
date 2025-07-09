@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 
 import '../../../../Core/MyColors.dart';
+import 'Widgets/ProfileCircularImage.dart';
 
 class MyAppBar extends StatelessWidget {
   Color itemColors;
@@ -14,14 +17,14 @@ class MyAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(Icons.list, color: itemColors),
+          Icon(CupertinoIcons.line_horizontal_3_decrease, color: itemColors),
           Row(
             children: [
-              Icon(Icons.notifications_none_outlined, color: itemColors),
+              Icon(IconlyLight.notification, color: itemColors),
               const SizedBox(width: 12),
               Stack(
                 children: [
-                  const CircleAvatar(child: Icon(Icons.ac_unit)),
+                  ProfileCircularImage(),
                   Positioned(
                     right: 0,
                     bottom: 0,
